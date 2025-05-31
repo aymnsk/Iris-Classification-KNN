@@ -1,0 +1,45 @@
+IRIS FLOWER CLASSIFICATION REPORT
+Prepared by: Ayman Shaikh
+
+1. INTRODUCTION
+The Iris flower dataset is a classic benchmark in machine learning, containing measurements of 150 flowers from three species. This project implements a K-Nearest Neighbors classifier to predict species based on four features: sepal length, sepal width, petal length, and petal width.
+
+2. METHODOLOGY
+
+2.1 Data Preparation
+- Loaded dataset from data.csv
+- Checked for missing values (none found)
+- Examined feature distributions
+- Encoded target labels
+
+2.2 Feature Engineering
+- Standardized features using StandardScaler
+- Split data into 80% training and 20% testing sets
+
+2.3 Model Development
+- Implemented KNeighborsClassifier from scikit-learn
+- Determined optimal k=7 through error rate analysis
+- Trained model on standardized features
+
+3. RESULTS
+The model achieved:
+- Accuracy: 96.67%
+- Precision: 0.97 (weighted avg)
+- Recall: 0.97 (weighted avg)
+
+Confusion matrix showed:
+- Perfect classification for Iris-setosa
+- 1 misclassification between versicolor and virginica
+
+4. DISCUSSION
+Key observations:
+- Petal measurements were more discriminative than sepal
+- Standardization improved accuracy by ~5%
+- Error analysis revealed most mistakes occur near class boundaries
+
+5. CONCLUSION
+The KNN algorithm proved effective for this classification task, achieving high accuracy with minimal preprocessing. Future work could explore alternative distance metrics or feature combinations.
+
+References:
+1. Scikit-learn documentation
+2. Iris dataset original research papers
